@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+:root{
+  --bordercolor:#dd7df7;
+  --bordercolorMoreBlack:#cf24ff;
+  --backgroundcolordefoult: #6e40c9;
+  --widthNational: 310px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #171934;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+section .areaInputSearch{
+  padding: 20px;
+  border-radius: 9px;
+  background-color: #FFF;
+  width: var(--widthNational);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section .areaInputSearch input{
+  font-size: 17px;
+  border: 2px solid transparent;
+  background-color: #d6d6d6;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+section .areaInputSearch input:valid,
+section .areaInputSearch input:focus{
+  outline: 2px solid var(--bordercolor);
+}
+
+section .areaInputSearch button{
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid var(#171934);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+section .container{
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 13px;
+  width: var(--widthNational);
+  transition: 0.2s;
+  max-height: 60px;
+}
+section .container .viewd{
+  opacity: 0;
+}
+
+section .container.active .viewd{
+  opacity: 1;
+}
+section .container.active{
+  max-height: 100%;
+}
+
+section .container.active .noSearch{
+  display: none;
+}
+
+section .container .viewd{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+section .container img{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+
+section .container h1{
+  font-size: 34px;
+  text-align: center;
+}
+
+section .container h1::first-letter{
+  text-transform: uppercase;
+}
+
+section .container .bibliografiaArea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+section .container .bibliografiaArea span:nth-child(1){
+  font-weight: 500;
+  font-size: 17px;
+  user-select: none;
+}
+
+section .container .bibliografiaArea span:nth-child(2){
+  text-align: center;
+}
+section .container a{
+  padding: 20px;
+  background-color: var(--bordercolorMoreBlack);
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFf;
+  font-weight: bold;
+  user-select: none;
+}
+
+section .container button{
+  width: 100%;
+  font-size: 20px;
+  border: 3px solid var(--bordercolor);
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+section .container button:hover{
+  background-color: rgba(0,0,0,0.1)
+}
